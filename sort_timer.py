@@ -98,3 +98,24 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def test_sort_timer():
+    """
+    Tests the timing functions with smaller lists before running the full graph.
+    """
+    test_list = [5, 2, 9, 1, 5, 6]
+    test_list_copy = list(test_list)
+
+    bubble_result = bubble_time(test_list)
+    insertion_result = insertion_time(test_list_copy)
+
+    print("Bubble sorted list:", test_list)
+    print("Insertion sorted list:", test_list_copy)
+    print("Bubble time:", bubble_result)
+    print("Insertion time:", insertion_result)
+
+    random_times = sort_times_for_random_list(100)
+    print("Random list sort times:", random_times)
+
+
+test_sort_timer()
