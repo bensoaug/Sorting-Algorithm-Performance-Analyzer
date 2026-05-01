@@ -22,7 +22,7 @@ python sort_timer.py
 
 ## Example Output
 
-![Sorting Graph](images/sort_graph.png)
+![Sorting Graph](Figure_1.png)
 
 ## What I Learned
 
