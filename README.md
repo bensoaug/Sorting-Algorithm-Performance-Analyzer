@@ -2,27 +2,30 @@
 
 This project compares the runtime performance of Bubble Sort and Insertion Sort using randomly generated lists of integers.
 
-The program times how long each sorting algorithm takes on lists of increasing size and then displays the results in a graph using Matplotlib.
-
 ## What This Project Does
 
 - Implements Bubble Sort
 - Implements Insertion Sort
-- Generates random lists of integers
-- Measures sorting time with `time.perf_counter()`
-- Compares runtimes across different list sizes
-- Graphs the results using Matplotlib
-
-## Technologies Used
-
-- Python
-- Matplotlib
-- Random module
-- Time module
+- Generates random lists
+- Measures runtime using time.perf_counter()
+- Graphs results using matplotlib
 
 ## How to Run
 
-First, install the required package:
+Install dependencies:
 
-```bash
 pip install -r requirements.txt
+
+Run the program:
+
+python sort_timer.py
+
+## Example Output
+
+![Sorting Graph](images/sort_graph.png)
+
+## What I Learned
+
+- How sorting algorithms behave as input size increases
+- Why O(n²) algorithms become slow quickly
+- How to visualize data using matplotlib
