@@ -2,7 +2,7 @@
 # GitHub username: bensoaug
 # Date: 04-29-2026
 # Description: Times bubble sort and insertion sort on random lists,
-# then graphs the results for comparison.
+#              then graphs the results for comparison.
 
 import time
 import random
@@ -75,16 +75,21 @@ def compare_sorts():
     insertion_times = []
 
     for list_length in list_lengths:
-        bubble_sort_time, insertion_sort_time = sort_times_for_random_list(list_length)
+        bubble_sort_time, insertion_sort_time = sort_times_for_random_list(
+            list_length
+        )
 
         bubble_times.append(bubble_sort_time)
         insertion_times.append(insertion_sort_time)
 
-    pyplot.plot(list_lengths, bubble_times, 'ro--', linewidth=2, label='Bubble Sort')
-    pyplot.plot(list_lengths, insertion_times, 'go--', linewidth=2, label='Insertion Sort')
+    pyplot.plot(list_lengths, bubble_times, 'ro--',
+                linewidth=2, label='Bubble Sort')
+    pyplot.plot(list_lengths, insertion_times, 'go--',
+                linewidth=2, label='Insertion Sort')
 
     pyplot.xlabel("Length of List")
     pyplot.ylabel("Time in Seconds")
+    pyplot.title("Bubble Sort vs Insertion Sort Runtime")
     pyplot.legend(loc='upper left')
     pyplot.show()
 
@@ -98,24 +103,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-def test_sort_timer():
-    """
-    Tests the timing functions with smaller lists before running the full graph.
-    """
-    test_list = [5, 2, 9, 1, 5, 6]
-    test_list_copy = list(test_list)
-
-    bubble_result = bubble_time(test_list)
-    insertion_result = insertion_time(test_list_copy)
-
-    print("Bubble sorted list:", test_list)
-    print("Insertion sorted list:", test_list_copy)
-    print("Bubble time:", bubble_result)
-    print("Insertion time:", insertion_result)
-
-    random_times = sort_times_for_random_list(100)
-    print("Random list sort times:", random_times)
-
-
-test_sort_timer()
